@@ -1,0 +1,11 @@
+name: Build and policy tests
+on: [push, pull_request]
+jobs:
+  validate:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Policy tests
+        run: swift test
+      - name: Build iOS app
+        run: xcodebuild -project WKWebViewLab.xcodeproj -scheme WKWebViewLab -sdk iphonesimulator -configuration Debug -derivedDataPath "$RUNNER_TEMP/LabBuild" CODE_SIGNING_ALLOWED=NO build
