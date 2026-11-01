@@ -1,0 +1,34 @@
+// !$*UTF8*$!
+{archiveVersion = 1; classes = {}; objectVersion = 56; objects = {
+00000000000000000000000A = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "App/LabApp.swift"; sourceTree = "<group>"; };
+000000000000000000000014 = {isa = PBXBuildFile; fileRef = 00000000000000000000000A; };
+00000000000000000000000B = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sources/LabCore/BridgePolicy.swift"; sourceTree = "<group>"; };
+000000000000000000000015 = {isa = PBXBuildFile; fileRef = 00000000000000000000000B; };
+00000000000000000000000C = {isa = PBXFileReference; lastKnownFileType = text.html; path = "App/index.html"; sourceTree = "<group>"; };
+000000000000000000000016 = {isa = PBXBuildFile; fileRef = 00000000000000000000000C; };
+00000000000000000000000D = {isa = PBXFileReference; lastKnownFileType = text.html; path = "App/frame.html"; sourceTree = "<group>"; };
+000000000000000000000017 = {isa = PBXBuildFile; fileRef = 00000000000000000000000D; };
+000000000000000000000001 = {isa = PBXProject; buildConfigurationList = 000000000000000000000028; compatibilityVersion = "Xcode 14.0"; mainGroup = 000000000000000000000002; productRefGroup = 000000000000000000000003; projectDirPath = ""; targets = (000000000000000000000004,000000000000000000000064,); };
+000000000000000000000002 = {isa = PBXGroup; children = (000000000000000000000065,00000000000000000000000A,00000000000000000000000B,00000000000000000000000C,00000000000000000000000D,000000000000000000000003,); sourceTree = "<group>"; };
+000000000000000000000003 = {isa = PBXGroup; children = (000000000000000000000005,000000000000000000000066,); name = Products; sourceTree = "<group>"; };
+000000000000000000000005 = {isa = PBXFileReference; explicitFileType = wrapper.application; path = WKWebViewLab.app; sourceTree = BUILT_PRODUCTS_DIR; };
+000000000000000000000004 = {isa = PBXNativeTarget; buildConfigurationList = 000000000000000000000029; buildPhases = (000000000000000000000006,000000000000000000000007,000000000000000000000008,); buildRules = (); dependencies = (); name = WKWebViewLab; productName = WKWebViewLab; productReference = 000000000000000000000005; productType = "com.apple.product-type.application"; };
+000000000000000000000006 = {isa = PBXSourcesBuildPhase; buildActionMask = 2147483647; files = (000000000000000000000014,000000000000000000000015,); runOnlyForDeploymentPostprocessing = 0; };
+000000000000000000000007 = {isa = PBXResourcesBuildPhase; buildActionMask = 2147483647; files = (000000000000000000000016,000000000000000000000017,); runOnlyForDeploymentPostprocessing = 0; };
+000000000000000000000008 = {isa = PBXFrameworksBuildPhase; buildActionMask = 2147483647; files = (); runOnlyForDeploymentPostprocessing = 0; };
+000000000000000000000028 = {isa = XCConfigurationList; buildConfigurations = (000000000000000000000032,00000000000000000000003C,); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release; };
+000000000000000000000032 = {isa = XCBuildConfiguration; buildSettings = {SDKROOT = iphoneos; IPHONEOS_DEPLOYMENT_TARGET = 17.0; SWIFT_VERSION = 5.0; CLANG_ENABLE_MODULES = YES; SWIFT_OPTIMIZATION_LEVEL = "-Onone";}; name = Debug; };
+00000000000000000000003C = {isa = XCBuildConfiguration; buildSettings = {SDKROOT = iphoneos; IPHONEOS_DEPLOYMENT_TARGET = 17.0; SWIFT_VERSION = 5.0; CLANG_ENABLE_MODULES = YES; SWIFT_OPTIMIZATION_LEVEL = "-O";}; name = Release; };
+000000000000000000000029 = {isa = XCConfigurationList; buildConfigurations = (000000000000000000000033,00000000000000000000003D,); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release; };
+000000000000000000000033 = {isa = XCBuildConfiguration; buildSettings = {SDKROOT = iphoneos; IPHONEOS_DEPLOYMENT_TARGET = 17.0; SWIFT_VERSION = 5.0; CLANG_ENABLE_MODULES = YES; PRODUCT_BUNDLE_IDENTIFIER = dev.pquanghuy.WKWebViewLab; PRODUCT_NAME = "$(TARGET_NAME)"; GENERATE_INFOPLIST_FILE = YES; INFOPLIST_KEY_UILaunchScreen_Generation = YES; INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES; TARGETED_DEVICE_FAMILY = "1,2"; CURRENT_PROJECT_VERSION = 1; MARKETING_VERSION = 1.0; CODE_SIGN_STYLE = Automatic; SWIFT_OPTIMIZATION_LEVEL = "-Onone";}; name = Debug; };
+00000000000000000000003D = {isa = XCBuildConfiguration; buildSettings = {SDKROOT = iphoneos; IPHONEOS_DEPLOYMENT_TARGET = 17.0; SWIFT_VERSION = 5.0; CLANG_ENABLE_MODULES = YES; PRODUCT_BUNDLE_IDENTIFIER = dev.pquanghuy.WKWebViewLab; PRODUCT_NAME = "$(TARGET_NAME)"; GENERATE_INFOPLIST_FILE = YES; INFOPLIST_KEY_UILaunchScreen_Generation = YES; INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES; TARGETED_DEVICE_FAMILY = "1,2"; CURRENT_PROJECT_VERSION = 1; MARKETING_VERSION = 1.0; CODE_SIGN_STYLE = Automatic; SWIFT_OPTIMIZATION_LEVEL = "-O";}; name = Release; };
+000000000000000000000065 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITests/LabUITests.swift; sourceTree = "<group>"; };
+000000000000000000000066 = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; path = LabUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+000000000000000000000067 = {isa = PBXBuildFile; fileRef = 000000000000000000000065; };
+000000000000000000000068 = {isa = PBXSourcesBuildPhase; buildActionMask = 2147483647; files = (000000000000000000000067,); runOnlyForDeploymentPostprocessing = 0; };
+000000000000000000000069 = {isa = PBXTargetDependency; target = 000000000000000000000004; };
+000000000000000000000064 = {isa = PBXNativeTarget; buildConfigurationList = 00000000000000000000006A; buildPhases = (000000000000000000000068,); buildRules = (); dependencies = (000000000000000000000069,); name = LabUITests; productName = LabUITests; productReference = 000000000000000000000066; productType = "com.apple.product-type.bundle.ui-testing"; };
+00000000000000000000006A = {isa = XCConfigurationList; buildConfigurations = (00000000000000000000006B,00000000000000000000006C,); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release; };
+00000000000000000000006B = {isa = XCBuildConfiguration; buildSettings = {PRODUCT_BUNDLE_IDENTIFIER = dev.pquanghuy.LabUITests; PRODUCT_NAME = "$(TARGET_NAME)"; GENERATE_INFOPLIST_FILE = YES; TEST_TARGET_NAME = WKWebViewLab; TARGETED_DEVICE_FAMILY = "1,2"; SWIFT_VERSION = 5.0; CODE_SIGN_STYLE = Automatic; }; name = Debug; };
+00000000000000000000006C = {isa = XCBuildConfiguration; buildSettings = {PRODUCT_BUNDLE_IDENTIFIER = dev.pquanghuy.LabUITests; PRODUCT_NAME = "$(TARGET_NAME)"; GENERATE_INFOPLIST_FILE = YES; TEST_TARGET_NAME = WKWebViewLab; TARGETED_DEVICE_FAMILY = "1,2"; SWIFT_VERSION = 5.0; CODE_SIGN_STYLE = Automatic; }; name = Release; };
+}; rootObject = 000000000000000000000001; }
