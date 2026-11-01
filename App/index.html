@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; frame-src 'self'">
+<title>Bridge lab</title><style>
+:root{color-scheme:light dark;font:16px -apple-system,system-ui}body{margin:0;padding:24px;background:light-dark(#f4f7fb,#121820);color:light-dark(#172b42,#e9f0fa)}h1{font-size:28px;margin:8px 0}p{line-height:1.5;color:light-dark(#506176,#aab9cc)}.eyebrow{font-size:12px;letter-spacing:2px;color:#548add}section{margin:22px 0;padding:18px;border:1px solid #71839a55;border-radius:16px}input,button{font:inherit;border-radius:10px;padding:12px;box-sizing:border-box}input{width:100%;border:1px solid #71839a88}button{margin-top:10px;border:0;background:#285fd5;color:white;width:100%}.secondary{background:light-dark(#dce6f4,#28374b);color:inherit}output{display:block;white-space:pre-wrap;overflow-wrap:anywhere;padding-top:12px;font-size:14px}a{display:block;margin-top:12px;color:light-dark(#245bbb,#8eb7ff)}iframe{width:100%;height:65px;border:0}#native{font-size:14px}
+</style></head><body>
+<div class="eyebrow">WEB CONTENT · LOCAL ONLY</div><h1>Hello, WebKit.</h1><p>Send a message across the bridge. Inspect the reply and native event log.</p>
+<section><label for="message">Message to Swift</label><input id="message" value="Hello from JavaScript 🧪" maxlength="1024"><button id="echo">Send & await reply</button><button class="secondary" id="invalid">Try invalid message</button><output id="result" aria-live="polite">Ready to send.</output></section>
+<section><strong>Native → web</strong><p id="native" aria-live="polite">Tap “Send to web” in the native toolbar.</p></section>
+<section><strong>Navigation boundary</strong><a href="https://example.com">Try external navigation (blocked)</a><a href="https://example.com" target="_blank">Try new window (blocked)</a><p>External pages are never loaded inside this privileged web view.</p></section>
+<section><strong>Subframe boundary</strong><p>A bundled subframe attempts the same bridge call.</p><iframe src="frame.html" title="Subframe bridge test"></iframe></section>
+<script>
+async function send(body){const out=document.getElementById('result');out.textContent='Waiting…';try{const reply=await window.webkit.messageHandlers.lab.postMessage(body);out.textContent=JSON.stringify(reply,null,2)}catch(error){out.textContent='Rejected: '+String(error)}}
+document.getElementById('echo').onclick=()=>send({version:1,action:'echo',text:document.getElementById('message').value});
+document.getElementById('invalid').onclick=()=>send({version:1,action:'unsupported'});
+</script></body></html>
